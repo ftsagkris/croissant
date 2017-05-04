@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Previously, on {{ blog.title }}</h2>
+    {% for post in posts %}
+        <div class="archive-title">
+            <a href="{{ post[1].uri }}">{{ post[1].title }}</a>
+        </div>
+        <div class="archive-date">
+        <time datetime="{{ post[1].date.strftime("%Y-%m-%d") }}">{{ post[1].date.strftime("%d %B, %Y")  }}</time>
+        </div>
+    {% endfor %}
+{% endblock %}

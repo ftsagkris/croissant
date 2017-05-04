@@ -1,0 +1,11 @@
+{% extends 'header.html' %}
+
+{% block page_title %}
+    <title>{{ meta.title }} - {{ blog.title }}</title>
+{% endblock page_title %}
+        
+{% block content %}
+    <h1>{{meta.title}}</h1>
+    {{ body|safe() }}
+
+{% endblock content%}

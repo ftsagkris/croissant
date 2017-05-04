@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    <title>{{ meta.title }} - {{ blog.title }}</title>
+{% endblock %}
+        
+{% block content %}
+    <h2>
+        {% if meta.link %}
+        <a class="link-post" href="{{ meta.link }}">{{ meta.title }}</a><span class="linkarrow">&rarr;</span>
+        {% else %}
+        {{ meta.title }}
+        {% endif %}
+    </h2>
+    <time class="post-date" datetime="{{ meta.date.strftime("%Y-%m-%d") }}"><a href="{{ meta.uri }}">{{ meta.date.strftime("%d %B, %Y") }}</a></time>
+    {{ body|safe() }}
+
+{% endblock %}
