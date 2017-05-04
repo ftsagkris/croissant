@@ -80,6 +80,8 @@ Croissant will output a very basic archive of all your posts under `http://speci
 
 Drafts
 ------
-You may notice that in the `config.yaml` file there is a `public drafts` option. If you set it to `True`, croissant will output your drafts under `http://specified-url.com/drafts/post-slug`. You may not want that. I do, so that I can quickly preview a post before it is rendered in the blog's homepage and RSS feed.
+You may notice that in the `config.yaml` file there is a `public_drafts` option. If you set it to `True`, croissant will output your drafts under `http://specified-url.com/drafts/post-slug`. You may not want that. I do, so that I can quickly preview a post before it is rendered in the blog's homepage and RSS feed.
 
 If you set it to `False`, croissant will create a `drafts` folder under your source folder and output a preview of your draft there.
+
+If you enable it, you should probably disallow access to the `/draft/` directory to all web crawlers in your `robots.txt` file.
