@@ -2,7 +2,7 @@ croissant 🥐
 ============
 Croissant is a very simple static-file blogging engine, using markdown files as input.
 
-****DISCLAIMER****  
+***DISCLAIMER***  
 *Croissant should be treated as an early alpha. You should also probably not use it.*
 
 Croissant is something I've wanted to create for a long time, but never really sat down to do it. I decided to try to make it in a week and see what happens. The resulting code is not something I'm proud of, and there are definitely *much* better static blogging engines out there, but I decided to upload it anyway and hope for some feedback!
