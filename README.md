@@ -42,8 +42,7 @@ Basics
 	
 	Post's main body.
 	
-	There should be at least one empty line between the 
-	post's frontmatter and body.
+	There should be at least one empty line between the post's frontmatter and body.
 
 All meta tags are optional. If you don't provide a custom slug, croissant will make a slug out of your post's title. If you don't provide a date, croissant will use the current date. The other two tags have a default value of `False`.
 
