@@ -47,7 +47,7 @@ Basics
 
 All meta tags are optional. If you don't provide a custom slug, croissant will make a slug out of your post's title. If you don't provide a date, croissant will use the current date. The other two tags have a default value of `False`.
 
-####Static page structure:
+###Static page structure:
 
 	About me
 	========
@@ -57,7 +57,7 @@ All meta tags are optional. If you don't provide a custom slug, croissant will m
 
 Again, `slug` is optional.
 
-####Source folder structure:
+###Source folder structure:
 
 	<specified-src-folder>/
 		posts/
