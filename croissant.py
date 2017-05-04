@@ -59,7 +59,6 @@ class Croissant:
         self.env.globals['blog'] = blog
 
         self.updated_posts = False
-        self.months_to_render = []
 
     def chk_dirs(self):
         if not os.path.isdir(self.source_path):
