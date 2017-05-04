@@ -17,6 +17,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 def slugify(text):
+    # credit: http://stackoverflow.com/a/8366771
     text = unidecode.unidecode(text.strip()).lower()
     return re.sub(r'\W+', '-', text)
 
@@ -596,7 +597,8 @@ class Croissant:
 
 if __name__ == '__main__':
     start_time = time.time()
-
+    
+    # credit: http://stackoverflow.com/a/789383
     pid = str(os.getpid())
     pidfile = '/tmp/croissant-daemon.pid'
 
