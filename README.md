@@ -7,7 +7,7 @@ Croissant is a very simple static-file blogging engine, using markdown files as 
 
 Croissant is something I've wanted to create for a long time, but never really sat down to do it. I decided to try to make it in a week and see what happens. The resulting code is not something I'm proud of, and there are definitely *much* better static blogging engines out there, but I decided to upload it anyway and hope for some feedback!
 
-I know the name isn't original (github returns another 100 entries for `croissant` and at least one of them is a blogging engine). A package named croissant already exists at PyPI, too. But that's the name I came up with of when thinking to create a [baked blog](http://inessential.com/2011/03/16/a_plea_for_baked_weblogs) engine and ultimately I decided that I liked the name enough --or cared too little to come up with something more original, you decide-- to keep it.
+I know the name isn't original (github returns another 100 entries for `croissant` and at least one of them is a blogging engine). A package named croissant already exists at PyPI, too. But that's the name I came up with when thinking about creating a [baked blog](http://inessential.com/2011/03/16/a_plea_for_baked_weblogs) engine and ultimately I decided that I liked the name enough --or cared too little to come up with something more original, you decide-- to keep it.
 
 Installation
 ------------
