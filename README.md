@@ -31,7 +31,7 @@ or, even better, use `inotifywait` to respond to file changes, as they happen.
 
 Basics
 ------
-####Post structure:
+**Post structure:**
 
 	Post title underlined by three or more equals signs
 	===================================================
