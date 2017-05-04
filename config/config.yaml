@@ -5,5 +5,5 @@ blog:
 
 public_drafts: False
 posts_in_homepage: 10
-source_path: /Users/filippos/Desktop/blog_source
-webroot: /Users/filippos/Desktop/croissant/html
+source_path: /my/blog/source
+webroot: /output/html
