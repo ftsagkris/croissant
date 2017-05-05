@@ -14,7 +14,7 @@ Installation
 Croissant requires Python 3.
 
 	pip3 install regex Markdown PyYAML Unidecode Jinja2
-	git clone https://github.com/ftsagkris/croissant.git
+	git clone https://github.com/ftsagkris/croissant.git  # or fork it first if you wish to change it
 	cd croissant
 	Edit config/config.yaml
 	python3 croissant.py
