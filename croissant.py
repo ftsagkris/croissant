@@ -205,21 +205,20 @@ class Croissant:
     def check_for_updated_media(self):
         for data_file in os.listdir(self.media_path):
             # This is for macOS
-            if data_file == '.DS_Store':
-                continue
-            if data_file not in self.media:
-                print('New file found: ', data_file)
-                self.add_file(data_file)
-            elif not self.is_file_moved(data_file):
-                print('File \'%s\' has been previously moved but was not found' \
-                      ' in site directory' % data_file)
-                self.add_file(data_file)
-            else:
-                file_updated = self.media[data_file]['mod'] \
-                    < os.path.getmtime(os.path.join(self.media_path, data_file))
-                if file_updated:
-                    print('File to update: ', data_file)
+            if data_file != '.DS_Store':
+                if data_file not in self.media:
+                    print('New file found: ', data_file)
                     self.add_file(data_file)
+                elif not self.is_file_moved(data_file):
+                    print('File \'%s\' has been previously moved but was not found' \
+                          ' in site directory' % data_file)
+                    self.add_file(data_file)
+                else:
+                    file_updated = self.media[data_file]['mod'] \
+                        < os.path.getmtime(os.path.join(self.media_path, data_file))
+                    if file_updated:
+                        print('File to update: ', data_file)
+                        self.add_file(data_file)
 
         for data_file in list(self.media.keys()):
             if not os.path.isfile(os.path.join(self.media_path, data_file)):
