@@ -442,8 +442,11 @@ class Croissant:
     def render_homepage(self):
         # Getting non-draft posts
         published_posts = dict(post for post in self.posts.items() if not post[1]['draft'])
+        # Ordering posts by publish date
+        ordered_posts = OrderedDict(sorted(published_posts.items(),
+                                           key=lambda t: t[1]['published'], reverse=True))
         # Keeping specified newest posts
-        newest_posts = list(published_posts)[:self.posts_in_homepage]
+        newest_posts = list(ordered_posts)[:self.posts_in_homepage]
 
         homepage_posts = {}
         for post in newest_posts:
@@ -471,7 +474,8 @@ class Croissant:
                 'uri': uri,
                 'link': link
             }
-
+        
+        # Reordering posts
         ordered_posts = OrderedDict(sorted(homepage_posts.items(),
                                            key=lambda t: t[1]['date'], reverse=True))
 
@@ -514,8 +518,11 @@ class Croissant:
     def render_rss(self):
         # Getting non-draft posts
         published_posts = dict(post for post in self.posts.items() if not post[1]['draft'])
+        # Ordering posts by publish date
+        ordered_posts = OrderedDict(sorted(published_posts.items(),
+                                           key=lambda t: t[1]['published'], reverse=True))
         # Keeping specified newest posts
-        newest_posts = list(published_posts)[:self.rss_posts]
+        newest_posts = list(ordered_posts)[:self.rss_posts]
 
         rss_posts = {}
         for post in newest_posts:
@@ -545,7 +552,7 @@ class Croissant:
                 'link': link
             }
 
-
+        # Reordering posts
         ordered_posts = OrderedDict(sorted(rss_posts.items(),
                                            key=lambda t: t[1]['date'], reverse=True))
 
