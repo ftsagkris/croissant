@@ -589,13 +589,13 @@ class Croissant:
 
     def rewrite_links(self, text):
         text = re.sub(
-            r" src=[\"'](../media/)([^/]+?)[\"']",
-            ' src="%s%s/%s"' % (self.blog_url, 'media', r"\2"),
+            r" src=[\"']../media/([^/]+?)[\"']",
+            ' src="%s%s/%s"' % (self.blog_url, 'media', r"\1"),
             text
         )
         text = re.sub(
-            r" href=[\"'](../media/)([^/]+?)[\"']",
-            ' href=%s/%s/%s' % (self.blog_url, 'media', r"\2"),
+            r" href=[\"']../media/([^/]+?)[\"']",
+            ' href=%s/%s/%s' % (self.blog_url, 'media', r"\1"),
             text
         )
 
