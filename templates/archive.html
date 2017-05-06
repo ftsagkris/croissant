@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Previously, on {{ blog.title }}</h2>
+    <h2 id="archive">Archive:</h2>
+    <ul>
     {% for post in posts %}
-        <div class="archive-title">
-            <a href="{{ post[1].uri }}">{{ post[1].title }}</a>
-        </div>
-        <div class="archive-date">
-        <time datetime="{{ post[1].date.strftime("%Y-%m-%d") }}">{{ post[1].date.strftime("%d %B, %Y")  }}</time>
-        </div>
+        <li>
+            <h3 class="archive-title">
+                <a href="{{ post[1].uri }}">{{ post[1].title }}</a>
+                <span>
+                    <time datetime="{{ post[1].date.strftime("%Y-%m-%d") }}">{{ post[1].date.strftime("%d %B, %Y")  }}</time>
+                </span>
+            </h3>
+        </li>
     {% endfor %}
+    </ul>
 {% endblock %}

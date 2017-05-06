@@ -3,15 +3,20 @@
 {% block content %}    
     {% for post in posts %}
     <article>
-        <h2>
-            {% if post[1].link %}
-            <a class="link-post" href="{{ post[1].link }}">{{ post[1].title }}</a><span class="linkarrow">&rarr;</span>
-            {% else %}
-            <a href="{{ post[1].uri }}">{{ post[1].title }}</a>
-            {% endif %}
-        </h2>
-        <time class="post-date" datetime="{{ post[1].date.strftime("%Y-%m-%d") }}"><a href="{{ post[1].uri }}">{{ post[1].date.strftime("%d %B, %Y")  }}</a></time>
-        {{ post[1].body|safe() }}
+        <header>
+            <h2>
+                {% if post[1].link %}
+                <a class="link-post" href="{{ post[1].link }}">{{ post[1].title }}</a><span class="linkarrow">&rarr;</span>
+                {% else %}
+                <a href="{{ post[1].uri }}">{{ post[1].title }}</a>
+                {% endif %}
+            </h2>
+            <a href="{{ post[1].uri }}"><time datetime="{{ post[1].date.strftime("%Y-%m-%d") }}">{{ post[1].date.strftime("%B %d, %Y").lstrip("0").replace(" 0", " ") }}</time></a>
+        </header>
+        <div class="post-text">
+            {{ post[1].body|safe() }}
+        </div>
+        <div class="fin">*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*</div>
     </article>
     {% endfor %}
 {% endblock %}

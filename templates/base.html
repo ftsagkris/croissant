@@ -4,10 +4,17 @@
         <meta charset="utf-8">
         {% block page_title %}<title>{{ blog.title }}</title>{% endblock %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ blog.url }}style.css"/>
         <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ blog.url }}rss.xml" />
     </head>
     <body>
-        <h1><a href="blog.url">{{ blog.title }}</a></h1>
-        {% block content %}{% endblock %}
+        <div id="mastheadbackground">&nbsp;</div>
+        <section id="wrapper">
+            <div id="masthead">
+                <h1><a href="/">{{ blog.title }}</a></h1>
+                <div id="tagline">{{ blog.description }}</div>
+            </div>
+            {% block content %}{% endblock %}
+        </section>
     </body>
 </html>
