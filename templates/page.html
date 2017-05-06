@@ -2,10 +2,13 @@
 
 {% block page_title %}
     <title>{{ meta.title }} - {{ blog.title }}</title>
-{% endblock page_title %}
+{% endblock %}
         
 {% block content %}
-    <h1>{{meta.title}}</h1>
-    {{ body|safe() }}
+    <h2 class="page-title">{{ meta.title }}</h2>
+    <div class="page-text">
+        {{ body|safe() }}
+    </div>
+    <div class="fin">*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*</div>
 
-{% endblock content%}
+{% endblock %}
