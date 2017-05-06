@@ -5,12 +5,12 @@
     <ul>
     {% for post in posts %}
         <li>
-            <h3 class="archive-title">
+            <h2 class="page-title">
                 <a href="{{ post[1].uri }}">{{ post[1].title }}</a>
                 <span>
                     <time datetime="{{ post[1].date.strftime("%Y-%m-%d") }}">{{ post[1].date.strftime("%B %d, %Y").lstrip("0").replace(" 0", " ") }}</time>
                 </span>
-            </h3>
+            </h2>
         </li>
     {% endfor %}
     </ul>
