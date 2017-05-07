@@ -602,8 +602,6 @@ class Croissant:
         return text
 
 if __name__ == '__main__':
-    start_time = time.time()
-    
     # credit: http://stackoverflow.com/a/789383
     pid = str(os.getpid())
     pidfile = '/tmp/croissant-daemon.pid'
@@ -618,5 +616,3 @@ if __name__ == '__main__':
             croissant.update()
         finally:
             os.unlink(pidfile)
-    elapsed_time = time.time() - start_time
-    print("%.2f seconds" % elapsed_time)
