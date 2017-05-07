@@ -319,6 +319,8 @@ class Croissant:
         mod_time = os.path.getmtime(os.path.join(self.media_path, data_file))
         src = os.path.join(self.media_path, data_file)
         if os.path.isfile(src):
+            if not os.path.isdir(os.path.join(self.webroot, 'media/')):
+                os.makedirs(os.path.join(self.webroot, 'media/'))
             dst = os.path.join(self.webroot, 'media/', data_file)
             copyfile(src, dst)
             self.media[data_file] = {
