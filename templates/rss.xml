@@ -14,7 +14,7 @@
             {% endif %}
 			<guid>{{ post[1].url }}</guid>
 			<description>{{ post[1].body|e }}</description>
-			<pubDate>{{ post[1].date.strftime("%d %B, %Y") }}</pubDate>
+			<pubDate>{{ post[1].date.strftime("%a, %d %b %Y %H:%M:%S %z") }}</pubDate>
 		</item>
 		{% endfor %}
 	</channel>
