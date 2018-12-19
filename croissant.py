@@ -17,7 +17,7 @@ from jinja2 import Environment, FileSystemLoader
 
 
 def slugify(text):
-    # credit: http://stackoverflow.com/a/8366771
+    # credits: http://stackoverflow.com/a/8366771
     text = unidecode.unidecode(text.strip()).lower()
     return re.sub(r'\W+', '-', text)
 
