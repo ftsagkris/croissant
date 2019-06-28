@@ -27,7 +27,7 @@ You can schedule a cron job to run the script every minute like this:
 
 	* * * * * python3 /path/to/croissant/croissant.py
 
-or, even better, use `inotifywait` to respond to file changes, as they happen. As a reference, here is my script for `inotifywait`:
+or, even better, use `inotifywait` to respond to file changes, as they happen. As a reference, here is my script:
     
     #!/bin/sh
 
